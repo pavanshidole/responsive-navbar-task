@@ -1,0 +1,145 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Roboto", system-ui;
+}
+
+.container{
+    width: 1200px;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.row{
+    display: table;
+    clear: both;
+    width: 100%;
+}
+
+.header{
+    background-color: #000;
+    color: #fff;
+}
+
+a:link,a:visited{
+    text-decoration: none;
+    display: inline-block;
+}
+
+.logo{
+    padding: 5px 0;
+}
+
+[class^=col-]{
+    float: left;
+    padding: 0 15px;
+}
+
+.textRight{
+    text-align: right;
+}
+
+.col-3{
+    width: calc((100% * 3)/12);
+}
+
+.col-9{
+    width: calc((100% * 9 )/12);
+}
+
+
+
+.navbar ul{
+    display: inline-block;
+}
+
+.navbar ul li{
+    display: inline-block;
+}
+
+.navbar ul li a{
+    color: #fff;
+    text-transform: capitalize;
+    padding: 0 5px;
+    margin: 0 5px;
+    height: 54px;
+    line-height: 54px;
+    font-size: 18px;
+    position: relative;
+}
+
+.navbar ul li:last-child a{
+    padding-right: 0;
+    margin-right: 0;
+}
+
+
+.navbar ul li a::after{
+    content: "";
+    width: 0%;
+    height: 4%;
+    background-color: hotpink;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transition: all .4s linear;
+}
+
+
+.navbar ul li .active::after,
+.navbar ul li a:hover::after{
+    width: 100%;
+    left: 0;
+}
+
+.position{
+    position: relative;
+}
+
+.toggleBtn{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: none;
+    cursor: pointer;
+}
+
+@media all and (max-width:600px){
+    .col-3,.col-9{
+        width: 100%;
+    }
+    .toggleBtn{
+        display: block;
+    }
+    .navbar.active{
+        display: block;
+    }
+    .navbar{
+        display: none;
+    }
+    .navbar ul{
+        display: block;
+    }
+    .navbar ul li{
+        display: block;
+        text-align: left;
+    }
+    
+}
+
+main h1{
+    text-transform: capitalize;
+    font-size: 32px;
+    padding: 10px;
+    margin: 10px;
+}
+
+main p{
+    font-size: 16px;
+    padding: 10px;
+    margin: 10px;
+}
